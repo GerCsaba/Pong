@@ -64,11 +64,6 @@ class Ball:
         self.x_vel*=-1
 
 
-
-
-    
-
-
 def draw1(win,paddles,ball,left_score,right_score):
     win.fill(BLACK)
 
@@ -84,10 +79,7 @@ def draw1(win,paddles,ball,left_score,right_score):
     for i in range(0,HEIGHT,LINEH*2):
         pygame.draw.rect(win,WHITE, (WIDTH//2-LINEW//2,i,LINEW,LINEH))
     
-
-
     ball.draw(win)
-
 
     pygame.display.update()
 
@@ -136,9 +128,6 @@ def handle_collision(ball,left_paddle,right_paddle):
                 reduction_factor=(right_paddle.height/2)/ball.MAX_VEL
                 y_vel=difference_y/reduction_factor
                 ball.y_vel=-1*y_vel
-
-  
-
 
 def main():
     run=True
@@ -199,9 +188,6 @@ def main():
             left_paddle.reset()
             left_score=0
             right_score=0
-
-            
-        
 
     pygame.quit()
 
